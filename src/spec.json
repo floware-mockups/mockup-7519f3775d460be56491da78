@@ -140,32 +140,37 @@
         "Pratica",
         "Indirizzo",
         "Tipo intervento",
-        "Stato"
+        "Stato",
+        "Coordinate (latitudine, longitudine)"
       ],
       "rows": [
         [
           "UT-26041",
           "Via Lumo, 12",
           "Ripristino marciapiede",
-          "Da fare"
+          "Da fare",
+          "45.4821, 9.1843"
         ],
         [
           "UT-26042",
           "Via Vela, 8",
           "Illuminazione",
-          "Da fare"
+          "Da fare",
+          "45.4876, 9.1762"
         ],
         [
           "UT-26043",
           "Viale Nubi, 31",
           "Riparazione buca",
-          "Da chiudere"
+          "Da chiudere",
+          "45.4798, 9.1915"
         ],
         [
           "UT-26044",
           "Via Brina, 4",
           "Rete idrica",
-          "In corso"
+          "In corso",
+          "45.4912, 9.1687"
         ]
       ],
       "form": [
@@ -176,5 +181,15 @@
   "theme": {
     "palette": "terracotta",
     "fonts": "classico"
-  }
+  },
+  "custom": [
+    {
+      "name": "CompilazioneModuli",
+      "title": "Compila modulo",
+      "description": "Scelta della pratica e del modello, mappatura dei campi e generazione dimostrativa con verifica.",
+      "role": "section",
+      "pageId": "registro-interventi",
+      "position": "top"
+    }
+  ]
 }
