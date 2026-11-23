@@ -68,6 +68,7 @@
         "Pratica",
         "Tipo intervento",
         "Indirizzo",
+        "Comune",
         "Tecnico incaricato",
         "Data sopralluogo",
         "Stato"
@@ -77,6 +78,7 @@
           "UT-26041",
           "Ripristino marciapiede",
           "Via Lumo, 12",
+          "Borgoverde",
           "Timo Riva",
           "18/06/2026",
           "Da fare"
@@ -85,6 +87,7 @@
           "UT-26042",
           "Illuminazione",
           "Via Vela, 8",
+          "Rivafosca",
           "Neri Lago",
           "19/06/2026",
           "Da fare"
@@ -93,6 +96,7 @@
           "UT-26043",
           "Riparazione buca",
           "Viale Nubi, 31",
+          "Montequieto",
           "Mira Bosco",
           "12/06/2026",
           "Da chiudere"
@@ -101,6 +105,7 @@
           "UT-26044",
           "Rete idrica",
           "Via Brina, 4",
+          "Borgoverde",
           "Timo Riva",
           "22/06/2026",
           "In corso"
@@ -109,6 +114,7 @@
           "UT-26045",
           "Segnaletica stradale",
           "Piazza Rugiada, 6",
+          "Rivafosca",
           "Neri Lago",
           "23/06/2026",
           "In istruttoria"
@@ -117,6 +123,7 @@
           "UT-26046",
           "Caditoia",
           "Via Filo, 17",
+          "Montequieto",
           "Mira Bosco",
           "24/06/2026",
           "In istruttoria"
@@ -126,10 +133,11 @@
         "Pratica",
         "Tipo intervento",
         "Indirizzo",
+        "Comune",
         "Tecnico incaricato",
-        "Data sopralluogo",
-        "Stato"
-      ]
+        "Data sopralluogo"
+      ],
+      "view": "kanban"
     },
     {
       "id": "mappa-punti",
@@ -139,6 +147,7 @@
       "columns": [
         "Pratica",
         "Indirizzo",
+        "Comune",
         "Tipo intervento",
         "Stato",
         "Coordinate (latitudine, longitudine)"
@@ -147,6 +156,7 @@
         [
           "UT-26041",
           "Via Lumo, 12",
+          "Borgoverde",
           "Ripristino marciapiede",
           "Da fare",
           "45.4821, 9.1843"
@@ -154,6 +164,7 @@
         [
           "UT-26042",
           "Via Vela, 8",
+          "Rivafosca",
           "Illuminazione",
           "Da fare",
           "45.4876, 9.1762"
@@ -161,6 +172,7 @@
         [
           "UT-26043",
           "Viale Nubi, 31",
+          "Montequieto",
           "Riparazione buca",
           "Da chiudere",
           "45.4798, 9.1915"
@@ -168,6 +180,7 @@
         [
           "UT-26044",
           "Via Brina, 4",
+          "Borgoverde",
           "Rete idrica",
           "In corso",
           "45.4912, 9.1687"
@@ -187,6 +200,14 @@
       "name": "CompilazioneModuli",
       "title": "Compila modulo",
       "description": "Scelta della pratica e del modello, mappatura dei campi e generazione dimostrativa con verifica.",
+      "role": "section",
+      "pageId": "registro-interventi",
+      "position": "top"
+    },
+    {
+      "name": "BachecaStatiOrdinati",
+      "title": "Bacheca con Da fare in fondo",
+      "description": "Vista aggiuntiva degli interventi che mantiene l’ordine degli stati e colloca Da fare per ultimo.",
       "role": "section",
       "pageId": "registro-interventi",
       "position": "top"
