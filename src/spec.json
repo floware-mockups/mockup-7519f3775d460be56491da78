@@ -29,35 +29,46 @@
         "Attività",
         "Indirizzo",
         "Scadenza",
-        "Stato"
+        "Stato",
+        "Email"
       ],
       "rows": [
         [
           "Sopralluogo — ripristino marciapiede",
           "Via Lumo, 12",
           "18/06/2026",
-          "Da fare"
+          "Da fare",
+          "Da compilare"
         ],
         [
           "Controllo — illuminazione",
           "Via Vela, 8",
           "19/06/2026",
-          "Da fare"
+          "Da fare",
+          "Da compilare"
         ],
         [
           "Chiusura segnalazione — buca",
           "Viale Nubi, 31",
           "20/06/2026",
-          "Da chiudere"
+          "Da chiudere",
+          "Da compilare"
         ],
         [
           "Verifica cantiere — rete idrica",
           "Via Brina, 4",
           "22/06/2026",
-          "In corso"
+          "In corso",
+          "Da compilare"
         ]
       ],
-      "form": []
+      "form": [
+        "Attività",
+        "Indirizzo",
+        "Scadenza",
+        "Stato",
+        "Email"
+      ]
     },
     {
       "id": "registro-interventi",
@@ -71,62 +82,69 @@
         "Comune",
         "Tecnico incaricato",
         "Data sopralluogo",
-        "Stato"
+        "Stato",
+        "Indirizzo email"
       ],
       "rows": [
         [
           "UT-26041",
-          "Ripristino marciapiede",
+          "Manutenzione stradale",
           "Via Lumo, 12",
           "Borgoverde",
           "Timo Riva",
           "18/06/2026",
-          "Da fare"
+          "Da fare",
+          "Da compilare"
         ],
         [
           "UT-26042",
-          "Illuminazione",
+          "Illuminazione pubblica",
           "Via Vela, 8",
           "Rivafosca",
           "Neri Lago",
           "19/06/2026",
-          "Da fare"
+          "Da fare",
+          "Da compilare"
         ],
         [
           "UT-26043",
-          "Riparazione buca",
+          "Manutenzione stradale",
           "Viale Nubi, 31",
           "Montequieto",
           "Mira Bosco",
           "12/06/2026",
-          "Da chiudere"
+          "Da chiudere",
+          "Da compilare"
         ],
         [
           "UT-26044",
-          "Rete idrica",
+          "Sottoservizi",
           "Via Brina, 4",
           "Borgoverde",
           "Timo Riva",
           "22/06/2026",
-          "In corso"
+          "In corso",
+          "Da compilare"
         ],
         [
           "UT-26045",
-          "Segnaletica stradale",
+          "Segnaletica",
           "Piazza Rugiada, 6",
           "Rivafosca",
           "Neri Lago",
           "23/06/2026",
-          "In istruttoria"
+          "In istruttoria",
+          "Da compilare"
         ],
         [
           "UT-26046",
-          "Caditoia",
+          "Drenaggio acque",
           "Via Filo, 17",
           "Montequieto",
           "Mira Bosco",
           "24/06/2026",
-          "In istruttoria"
+          "In istruttoria",
+          "Da compilare"
         ]
       ],
       "form": [
@@ -135,61 +153,11 @@
         "Indirizzo",
         "Comune",
         "Tecnico incaricato",
-        "Data sopralluogo"
+        "Data sopralluogo",
+        "Stato",
+        "Indirizzo email"
       ],
       "view": "kanban"
-    },
-    {
-      "id": "mappa-punti",
-      "title": "Mappa dei punti",
-      "description": "Scegli un indirizzo per posizionare il cursore. La mappa è schematica e usa solo luoghi inventati.",
-      "metrics": [],
-      "columns": [
-        "Pratica",
-        "Indirizzo",
-        "Comune",
-        "Tipo intervento",
-        "Stato",
-        "Coordinate (latitudine, longitudine)"
-      ],
-      "rows": [
-        [
-          "UT-26041",
-          "Via Lumo, 12",
-          "Borgoverde",
-          "Ripristino marciapiede",
-          "Da fare",
-          "45.4821, 9.1843"
-        ],
-        [
-          "UT-26042",
-          "Via Vela, 8",
-          "Rivafosca",
-          "Illuminazione",
-          "Da fare",
-          "45.4876, 9.1762"
-        ],
-        [
-          "UT-26043",
-          "Viale Nubi, 31",
-          "Montequieto",
-          "Riparazione buca",
-          "Da chiudere",
-          "45.4798, 9.1915"
-        ],
-        [
-          "UT-26044",
-          "Via Brina, 4",
-          "Borgoverde",
-          "Rete idrica",
-          "In corso",
-          "45.4912, 9.1687"
-        ]
-      ],
-      "form": [
-        "Pratica"
-      ],
-      "view": "cards"
     }
   ],
   "theme": {
@@ -214,12 +182,12 @@
       "position": "top"
     },
     {
-      "name": "MappaInterventi",
-      "title": "Mappa dimostrativa degli interventi",
-      "description": "Segnaposti ricavati dalle coordinate e schede selezionabili con i dati degli interventi.",
-      "role": "section",
-      "pageId": "mappa-punti",
-      "position": "top"
+      "name": "ModificaPraticaRegistro",
+      "title": "Modifica pratica",
+      "description": "Azione per riga con modulo precompilato e salvataggio in memoria.",
+      "role": "cell",
+      "pageId": "registro-interventi",
+      "column": "Pratica"
     }
   ]
 }
