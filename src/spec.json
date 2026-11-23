@@ -77,7 +77,6 @@
       "metrics": [],
       "columns": [
         "Pratica",
-        "Tipo intervento",
         "Indirizzo",
         "Comune",
         "Tecnico incaricato",
@@ -87,8 +86,7 @@
       ],
       "rows": [
         [
-          "UT-26041",
-          "Manutenzione stradale",
+          "UT-0001",
           "Via Lumo, 12",
           "Borgoverde",
           "Timo Riva",
@@ -97,8 +95,7 @@
           "Da compilare"
         ],
         [
-          "UT-26042",
-          "Illuminazione pubblica",
+          "UT-0002",
           "Via Vela, 8",
           "Rivafosca",
           "Neri Lago",
@@ -107,8 +104,7 @@
           "Da compilare"
         ],
         [
-          "UT-26043",
-          "Manutenzione stradale",
+          "UT-0003",
           "Viale Nubi, 31",
           "Montequieto",
           "Mira Bosco",
@@ -117,8 +113,7 @@
           "Da compilare"
         ],
         [
-          "UT-26044",
-          "Sottoservizi",
+          "UT-0004",
           "Via Brina, 4",
           "Borgoverde",
           "Timo Riva",
@@ -127,8 +122,7 @@
           "Da compilare"
         ],
         [
-          "UT-26045",
-          "Segnaletica",
+          "UT-0005",
           "Piazza Rugiada, 6",
           "Rivafosca",
           "Neri Lago",
@@ -137,8 +131,7 @@
           "Da compilare"
         ],
         [
-          "UT-26046",
-          "Drenaggio acque",
+          "UT-0006",
           "Via Filo, 17",
           "Montequieto",
           "Mira Bosco",
@@ -149,7 +142,6 @@
       ],
       "form": [
         "Pratica",
-        "Tipo intervento",
         "Indirizzo",
         "Comune",
         "Tecnico incaricato",
@@ -184,10 +176,18 @@
     {
       "name": "ModificaPraticaRegistro",
       "title": "Modifica pratica",
-      "description": "Azione per riga con modulo precompilato e salvataggio in memoria.",
+      "description": "Modifica dei dati della pratica con identificativo protetto.",
       "role": "cell",
       "pageId": "registro-interventi",
       "column": "Pratica"
+    },
+    {
+      "name": "NumerazionePratiche",
+      "title": "Numerazione progressiva",
+      "description": "Assegna i progressivi mancanti mantenendo in memoria il massimo utilizzato anche dopo le rimozioni.",
+      "role": "section",
+      "pageId": "registro-interventi",
+      "position": "top"
     }
   ]
 }
