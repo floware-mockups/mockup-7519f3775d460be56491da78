@@ -212,6 +212,14 @@
       "role": "section",
       "pageId": "registro-interventi",
       "position": "top"
+    },
+    {
+      "name": "MappaInterventi",
+      "title": "Mappa dimostrativa degli interventi",
+      "description": "Segnaposti ricavati dalle coordinate e schede selezionabili con i dati degli interventi.",
+      "role": "section",
+      "pageId": "mappa-punti",
+      "position": "top"
     }
   ]
 }
