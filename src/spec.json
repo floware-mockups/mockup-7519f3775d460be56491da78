@@ -184,7 +184,7 @@
     {
       "name": "NumerazionePratiche",
       "title": "Numerazione progressiva",
-      "description": "Assegna i progressivi mancanti mantenendo in memoria il massimo utilizzato anche dopo le rimozioni.",
+      "description": "Crea nuove pratiche e mantiene in memoria il massimo progressivo utilizzato, anche dopo le rimozioni.",
       "role": "section",
       "pageId": "registro-interventi",
       "position": "top"
