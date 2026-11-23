@@ -1,0 +1,180 @@
+{
+  "title": "Localizzazione e gestione degli interventi stradali",
+  "description": "Prototipo per registrare punti sulla strada, vedere il cursore sulla mappa e seguire sopralluoghi, cantieri e segnalazioni. Dati e luoghi sono inventati.",
+  "accent": "indigo",
+  "pages": [
+    {
+      "id": "cruscotto",
+      "title": "Cruscotto",
+      "description": "Uno sguardo rapido alle pratiche, alle scadenze e ai controlli da fare.",
+      "metrics": [
+        {
+          "label": "Pratiche in istruttoria",
+          "value": "4"
+        },
+        {
+          "label": "Sopralluoghi della settimana",
+          "value": "3"
+        },
+        {
+          "label": "Cantieri aperti",
+          "value": "2"
+        },
+        {
+          "label": "Segnalazioni da chiudere",
+          "value": "2"
+        }
+      ],
+      "columns": [
+        "Attività",
+        "Indirizzo",
+        "Scadenza",
+        "Stato"
+      ],
+      "rows": [
+        [
+          "Sopralluogo — ripristino marciapiede",
+          "Via Lumo, 12",
+          "18/06/2026",
+          "Da fare"
+        ],
+        [
+          "Controllo — illuminazione",
+          "Via Vela, 8",
+          "19/06/2026",
+          "Da fare"
+        ],
+        [
+          "Chiusura segnalazione — buca",
+          "Viale Nubi, 31",
+          "20/06/2026",
+          "Da chiudere"
+        ],
+        [
+          "Verifica cantiere — rete idrica",
+          "Via Brina, 4",
+          "22/06/2026",
+          "In corso"
+        ]
+      ],
+      "form": []
+    },
+    {
+      "id": "registro-interventi",
+      "title": "Registro interventi",
+      "description": "Cerca le pratiche e filtra l'elenco per stato. Seleziona una riga per aprire il punto sulla mappa.",
+      "metrics": [],
+      "columns": [
+        "Pratica",
+        "Tipo intervento",
+        "Indirizzo",
+        "Tecnico incaricato",
+        "Data sopralluogo",
+        "Stato"
+      ],
+      "rows": [
+        [
+          "UT-26041",
+          "Ripristino marciapiede",
+          "Via Lumo, 12",
+          "Timo Riva",
+          "18/06/2026",
+          "Da fare"
+        ],
+        [
+          "UT-26042",
+          "Illuminazione",
+          "Via Vela, 8",
+          "Neri Lago",
+          "19/06/2026",
+          "Da fare"
+        ],
+        [
+          "UT-26043",
+          "Riparazione buca",
+          "Viale Nubi, 31",
+          "Mira Bosco",
+          "12/06/2026",
+          "Da chiudere"
+        ],
+        [
+          "UT-26044",
+          "Rete idrica",
+          "Via Brina, 4",
+          "Timo Riva",
+          "22/06/2026",
+          "In corso"
+        ],
+        [
+          "UT-26045",
+          "Segnaletica stradale",
+          "Piazza Rugiada, 6",
+          "Neri Lago",
+          "23/06/2026",
+          "In istruttoria"
+        ],
+        [
+          "UT-26046",
+          "Caditoia",
+          "Via Filo, 17",
+          "Mira Bosco",
+          "24/06/2026",
+          "In istruttoria"
+        ]
+      ],
+      "form": [
+        "Pratica",
+        "Tipo intervento",
+        "Indirizzo",
+        "Tecnico incaricato",
+        "Data sopralluogo",
+        "Stato"
+      ]
+    },
+    {
+      "id": "mappa-punti",
+      "title": "Mappa dei punti",
+      "description": "Scegli un indirizzo per posizionare il cursore. La mappa è schematica e usa solo luoghi inventati.",
+      "metrics": [],
+      "columns": [
+        "Pratica",
+        "Indirizzo",
+        "Tipo intervento",
+        "Stato"
+      ],
+      "rows": [
+        [
+          "UT-26041",
+          "Via Lumo, 12",
+          "Ripristino marciapiede",
+          "Da fare"
+        ],
+        [
+          "UT-26042",
+          "Via Vela, 8",
+          "Illuminazione",
+          "Da fare"
+        ],
+        [
+          "UT-26043",
+          "Viale Nubi, 31",
+          "Riparazione buca",
+          "Da chiudere"
+        ],
+        [
+          "UT-26044",
+          "Via Brina, 4",
+          "Rete idrica",
+          "In corso"
+        ]
+      ],
+      "form": [
+        "Pratica"
+      ]
+    }
+  ],
+  "theme": {
+    "palette": "terracotta",
+    "fonts": "classico"
+  }
+}
