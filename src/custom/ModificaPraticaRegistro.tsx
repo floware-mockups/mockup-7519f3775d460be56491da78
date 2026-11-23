@@ -11,10 +11,12 @@ export default function ModificaPraticaRegistro(props) {__mk();
   const table = useTable(props.pageId);
   const { notify } = usePrototype();
   const [aperto, setAperto] = useState(false);
+  const [posizione, setPosizione] = useState(false);
   const [valori, setValori] = useState([]);
   const [originali, setOriginali] = useState([]);
   const [errore, setErrore] = useState("");
   const disponibile = table && table.column("Pratica") >= 0 && Boolean(table.rows[props.rowIndex]);
+  const coordinate = disponibile && table.column("Coordinate") >= 0 ? table.value(props.rowIndex, "Coordinate") : "";
   const chiudi = () => (__mk(), setAperto(false));
   const apri = () => {__mk();
     if (!disponibile) return;
@@ -40,7 +42,20 @@ export default function ModificaPraticaRegistro(props) {__mk();
   };
   return <div className="space-y-2">
     <span>{props.value}</span>
-    <div><Button variant="secondary" disabled={!disponibile} onClick={apri}>Modifica</Button></div>
+    <div className="flex flex-wrap gap-2">
+      <Button variant="secondary" disabled={!disponibile} onClick={apri}>Modifica</Button>
+      <Button variant="secondary" disabled={!disponibile} onClick={() => (__mk(), setPosizione(true))}>Apri posizione</Button>
+    </div>
+    {posizione && <Dialog title="Posizione della pratica" onClose={() => (__mk(), setPosizione(false))} footer={<Button onClick={() => (__mk(), setPosizione(false))}>Chiudi</Button>}>
+      <div className="space-y-4">
+        <Field label="Pratica">{disponibile ? table.value(props.rowIndex, "Pratica") : props.value}</Field>
+        {coordinate.trim() ? <>
+          <Field label="Coordinate"><p className="select-text font-mono">{coordinate}</p></Field>
+          <p>Seleziona e copia queste coordinate, poi incollale nella ricerca di Google Maps.</p>
+          <p className="text-sm text-(--mk-muted)">Le coordinate provengono dalla stessa riga del registro. In questo prototipo non è disponibile l’apertura diretta di siti esterni.</p>
+        </> : <p>Coordinate non disponibili per questa pratica.</p>}
+      </div>
+    </Dialog>}
     {aperto && <Dialog title="Modifica pratica" onClose={chiudi} footer={<><Button variant="secondary" onClick={chiudi}>Annulla</Button><Button onClick={salva} disabled={!disponibile}>Salva modifiche</Button></>}>
       <div className="space-y-4">
         <Field label="Pratica">{props.value || "Assegnazione automatica in corso"}</Field>

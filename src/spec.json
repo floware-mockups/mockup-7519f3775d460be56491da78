@@ -82,7 +82,8 @@
         "Tecnico incaricato",
         "Data sopralluogo",
         "Stato",
-        "Indirizzo email"
+        "Indirizzo email",
+        "Coordinate"
       ],
       "rows": [
         [
@@ -92,7 +93,8 @@
           "Timo Riva",
           "18/06/2026",
           "Da fare",
-          "Da compilare"
+          "Da compilare",
+          "45.1234, 9.1234"
         ],
         [
           "UT-0002",
@@ -101,7 +103,8 @@
           "Neri Lago",
           "19/06/2026",
           "Da fare",
-          "Da compilare"
+          "Da compilare",
+          "45.2345, 9.2345"
         ],
         [
           "UT-0003",
@@ -110,7 +113,8 @@
           "Mira Bosco",
           "12/06/2026",
           "Da chiudere",
-          "Da compilare"
+          "Da compilare",
+          "45.3456, 9.3456"
         ],
         [
           "UT-0004",
@@ -119,7 +123,8 @@
           "Timo Riva",
           "22/06/2026",
           "In corso",
-          "Da compilare"
+          "Da compilare",
+          "45.4567, 9.4567"
         ],
         [
           "UT-0005",
@@ -128,7 +133,8 @@
           "Neri Lago",
           "23/06/2026",
           "In istruttoria",
-          "Da compilare"
+          "Da compilare",
+          "45.5678, 9.5678"
         ],
         [
           "UT-0006",
@@ -137,7 +143,8 @@
           "Mira Bosco",
           "24/06/2026",
           "In istruttoria",
-          "Da compilare"
+          "Da compilare",
+          "45.6789, 9.6789"
         ]
       ],
       "form": [
@@ -174,20 +181,20 @@
       "position": "top"
     },
     {
-      "name": "ModificaPraticaRegistro",
-      "title": "Modifica pratica",
-      "description": "Modifica dei dati della pratica con identificativo protetto.",
-      "role": "cell",
-      "pageId": "registro-interventi",
-      "column": "Pratica"
-    },
-    {
       "name": "NumerazionePratiche",
       "title": "Numerazione progressiva",
       "description": "Crea nuove pratiche e mantiene in memoria il massimo progressivo utilizzato, anche dopo le rimozioni.",
       "role": "section",
       "pageId": "registro-interventi",
       "position": "top"
+    },
+    {
+      "name": "ModificaPraticaRegistro",
+      "title": "Modifica pratica e posizione",
+      "description": "Mantiene la modifica della pratica e mostra le coordinate aggiornate della stessa riga.",
+      "role": "cell",
+      "pageId": "registro-interventi",
+      "column": "Pratica"
     }
   ]
 }
